@@ -15,6 +15,11 @@ class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 <property name="prefix" value="/WEB-INF/View/" /> 
 <property name="suffix" value=".jsp" /> 
 </bean> 
-
+<bean id="userdao" class="HOS.DAO.userDAO"></bean>
+<bean id="roledao" class="HOS.DAO.roleDAO"></bean>
+<bean class="org.springframework.context.support.ResourceBundleMessageSource" 
+id="messageSource"> 
+<property name="basename" value="messages" /> 
+</bean>
 <mvc:annotation-driven/> 
 </beans>

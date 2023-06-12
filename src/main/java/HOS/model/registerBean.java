@@ -1,9 +1,22 @@
 package HOS.model;
 
+import javax.validation.constraints.NotEmpty;
+
 public class registerBean {
+	@NotEmpty
 	private String userName;
+	@NotEmpty
 	private String userEmail;
+	@NotEmpty
 	private String userPassword;
+	
+	private Integer userRole;
+	public Integer getUserRole() {
+		return userRole;
+	}
+	public void setUserRole(Integer userRole) {
+		this.userRole = userRole;
+	}
 	public String getUserName() {
 		return userName;
 	}

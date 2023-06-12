@@ -19,7 +19,7 @@
 }
 .main{
 	width: 350px;
-	height: 500px;
+	height: 600px;
 	overflow: hidden;
 	background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
 	border-radius: 10px;
@@ -38,27 +38,30 @@ label{
 	font-size: 2.3em;
 	justify-content: center;
 	display: flex;
-	margin: 60px;
+	margin: 45px;
 	font-weight: bold;
 	cursor: pointer;
 	transition: .5s ease-in-out;
 }
-input{
-	width: 60%;
-	height: 20px;
-	background: #e0dede;
-	justify-content: center;
+.input-box{
 	display: flex;
-	margin: 20px auto;
+	justify-content: center;
+	margin-top: 25px;
+
+}
+input{
+	width: 70%;
+	height: 15px;
+	background: #e0dede;	
 	padding: 10px;
 	border: none;
 	outline: none;
 	border-radius: 5px;
 }
 button{
-	width: 60%;
+	width: 70%;
 	height: 40px;
-	margin: 10px auto;
+	margin: 0 auto 0;
 	justify-content: center;
 	display: block;
 	color: #fff;
@@ -80,7 +83,7 @@ button:hover{
 	height: 460px;
 	background: #eee;
 	border-radius: 60% / 10%;
-	transform: translateY(-180px);
+	transform: translateY(-110px);
 	transition: .8s ease-in-out;
 }
 .login label{
@@ -97,29 +100,67 @@ button:hover{
 #chk:checked ~ .signup label{
 	transform: scale(.6);
 }
+span{
+	display: flex;
+	justify-content: center;
+	font-size: small;
+	font-style: italic;
+	color:red;
+}
+
 	</style>
+
 </head>
 <body>
+
+
+
+
 	<div class="main">  	
 		<input type="checkbox" id="chk" aria-hidden="true">
 
 			<div class="signup">
-				<form:form modelAttribute="registerBean" method="Post" action="HOS/register">
+
+				<form:form modelAttribute="registerBean" method="Post" action="/HOS/register">
+					<span>${success}</span>
 					<label for="chk" aria-hidden="true" style="color: #065558">Register Form</label>
-					<input type="text" name="txt" placeholder="User name" required="">
-					<input type="email" name="email" placeholder="Email" required="">
-					<input type="password" name="pswd" placeholder="Password" required="">
-					<input type="password" name="pswd" placeholder="Confirm Password" required="">
-					<button>Register</button>
+					<span>${bindingerror}</span>
+					<span>${notUser}</span>
+					<div class="input-box">
+						<form:input type="email"  placeholder="userEmail" path="userEmail"/> 
+					</div>
+						<span> ${sameEmail}</span>
+						<span><form:errors path = "userEmail" ></form:errors></span>
+					<div class="input-box">
+						<form:input type="text"  placeholder="userName"  path="userName"/>
+					</div>
+					<span><form:errors path = "userName" ></form:errors></span>
+					<div class="input-box">
+						<form:input type="password" placeholder="userPassword" path="userPassword"/>
+					</div>
+					<span>${passwordError2 }</span>
+					<span><form:errors path = "userPassword"></form:errors></span>
+					<div class="input-box">
+						<input type="password" name="cPassword" placeholder="Confirm Password"/>
+					</div>		
+					<span><form:errors path ="userPassword"></form:errors></span>
+					<span>${passwordError1}</span>
+					<form:button>Register</form:button>
+					
 				</form:form>
 			</div>
 
 			<div class="login">
-				<form:form>
+				<form:form modelAttribute="registerBean" method="Post" action="/HOS/login">
 					<label for="chk" aria-hidden="true">Login</label>
-					<input type="email" name="email" placeholder="Email" required="">
-					<input type="password" name="pswd" placeholder="Password" required="">
-					<button>Login</button>
+					<div class="input-box">
+						<form:input type="email"  placeholder="userEmail" path="userEmail"/>
+					</div>
+					<div class="input-box">
+						<form:input type="password" placeholder="userPassword" path="userPassword"/>
+					</div>
+					<span><form:errors path = "userPassword" style="color:red;"></form:errors></span>
+					<form:button>Login</form:button>
 				</form:form>
 			</div>
 	</div>
