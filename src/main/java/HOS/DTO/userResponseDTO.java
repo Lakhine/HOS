@@ -4,6 +4,13 @@ public class userResponseDTO {
 	private String userName;
 	private String userEmail;
 	private String userPassword;
+	private Integer roleId;
+	public Integer getRoleId() {
+		return roleId;
+	}
+	public void setRoleId(Integer roleId) {
+		this.roleId = roleId;
+	}
 	public String getUserName() {
 		return userName;
 	}

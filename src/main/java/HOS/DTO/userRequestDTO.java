@@ -4,6 +4,13 @@ public class userRequestDTO {
 	private String userName;
 	private String userEmail;
 	private String userPassword;
+	public Integer getRoleId() {
+		return roleId;
+	}
+	public void setRoleId(Integer roleId) {
+		this.roleId = roleId;
+	}
+	private Integer roleId;
 	public String getUserName() {
 		return userName;
 	}

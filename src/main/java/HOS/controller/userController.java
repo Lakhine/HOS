@@ -16,21 +16,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import HOS.DTO.userRequestDTO;
 import HOS.DTO.userResponseDTO;
-import HOS.DAO.roleDAO;
+
 import HOS.DAO.userDAO;
 import HOS.model.registerBean;
-import HOS.DTO.roleRequestDTO;
-import HOS.DTO.roleResponseDTO;
+
+
 
 @Controller
 public class userController {
 	@Autowired
 	private userDAO userdao;
-	@Autowired
-	private roleDAO roledao;
-	@RequestMapping(value="/",method=RequestMethod.GET)
+	@RequestMapping(value={"/"},method=RequestMethod.GET)
 	public ModelAndView registerView() {
-		return new ModelAndView("loginregister","registerBean",new registerBean());
+		return new ModelAndView("register","registerBean",new registerBean());
 	}
 	@RequestMapping(value="/register",method=RequestMethod.POST) //Registration
 	public String register(
@@ -43,17 +41,15 @@ public class userController {
 			) {
 	if (br.hasErrors()){
 		m.addAttribute("bindingerror","Binding Result error");
-			return "loginregister";
+			return "register";
 			
 		}
 		userRequestDTO req = new userRequestDTO();
 		ArrayList<userResponseDTO> list = userdao.getAllusers();
-//		roleRequestDTO Rreq = new roleRequestDTO();
-//		ArrayList<roleResponseDTO> Rlist = roledao.getAllrole();
+
 		req.setUserEmail(bean.getUserEmail());
 		req.setUserPassword(bean.getUserPassword());
 		req.setUserName(bean.getUserName());
-//		Rreq.setRoleId(bean.getUserRole());
 		boolean samePassword = false;
 		boolean sameEmail=false;
 		if(cPassword.equals(bean.getUserPassword())) {  		//password duplicate
@@ -62,54 +58,58 @@ public class userController {
 				if(bean.getUserEmail().equals(res.getUserEmail())) {  //email duplicate
 					sameEmail=true;
 					m.addAttribute("sameEmail","This email is already existing!!");
-					return "loginregister";
+					return "register";
 				}
 			}
 			if(!sameEmail) {
 				int result = userdao.insertuser(req);
 				if(result==0) {
 					m.addAttribute("passwordError1","Insert failed");
-					return "loginregister";
+					return "register";
 				}
 		}
 			}
 			
 		if(!samePassword) {
 			m.addAttribute("passwordError2","Password doesn't match");
-			return "loginregister";
+			return "register";
 		}
 		
 		m.addAttribute("success","Registeration success");
-		return "redirect:/";
+		return "login";
+	}
+	@RequestMapping(value={"/login"},method=RequestMethod.GET)
+	public ModelAndView login() {
+		return new ModelAndView("login","registerBean",new registerBean());
 	}
 
-//@RequestMapping(value="/login",method=RequestMethod.POST)  //login( need to check and if there is no error use it)
-//public String login(
-//		@ModelAttribute("registerBean")
-//		@Validated
-//		registerBean bean,
-//		BindingResult br,
-//		ModelMap m,
-//		
-//		HttpSession session
-//		) {
+@RequestMapping(value="/processlogin",method=RequestMethod.POST)  //login( need to check and if there is no error use it)
+public String login(
+		@ModelAttribute("registerBean")
+		@Validated
+		registerBean bean,
+		BindingResult br,
+		ModelMap m,
+		
+		HttpSession session
+		) {
 //	if(br.hasErrors()) {
 //		m.addAttribute("bindingerror1","Binding error");
-//		return "loginregister";
+//		return "login";
 //	}
-//	ArrayList<userResponseDTO> list = userdao.getAllusers();
-//	boolean correctUser = false;
-//	for(userResponseDTO res : list) {
-//		if(bean.getUserEmail().equals(res.getUserEmail())&&bean.getUserPassword().equals(res.getUserPassword())) {
-//			correctUser = true;
-//			session.setAttribute("currentUserName", res.getUserName());
-//			break;
-//		}
-//	}
-//	if(!correctUser) {
-//		m.addAttribute("notUser","Email or Password wrong!!");
-//		return "loginregister";
-//	}
-//	return "homepage";
-//}
+	ArrayList<userResponseDTO> list = userdao.getAllusers();
+	boolean correctUser = false;
+	for(userResponseDTO res : list) {
+		if(bean.getUserEmail().equals(res.getUserEmail())&&bean.getUserPassword().equals(res.getUserPassword())) {
+			correctUser = true;
+			session.setAttribute("currentUserName", res.getUserName());
+			break;
+		}
+	}
+	if(!correctUser) {
+		m.addAttribute("notUser","Email or Password wrong!!");
+		return "login";
+	}
+	return "homepage";
+}
 }

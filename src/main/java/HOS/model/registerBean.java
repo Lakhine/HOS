@@ -10,15 +10,16 @@ public class registerBean {
 	@NotEmpty
 	private String userPassword;
 	
-	private Integer userRole;
-	public Integer getUserRole() {
-		return userRole;
-	}
-	public void setUserRole(Integer userRole) {
-		this.userRole = userRole;
-	}
+	private Integer roleId;
+
 	public String getUserName() {
 		return userName;
+	}
+	public Integer getRoleId() {
+		return roleId;
+	}
+	public void setRoleId(Integer roleId) {
+		this.roleId = roleId;
 	}
 	public void setUserName(String userName) {
 		this.userName = userName;

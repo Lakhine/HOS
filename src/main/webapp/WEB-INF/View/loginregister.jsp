@@ -121,7 +121,7 @@ span{
 
 			<div class="signup">
 
-				<form:form modelAttribute="registerBean" method="Post" action="/HOS/register">
+			<!--<form:form modelAttribute="registerBean" method="Post" action="/HOS/register">-->
 					<span>${success}</span>
 					<label for="chk" aria-hidden="true" style="color: #065558">Register Form</label>
 					<span>${bindingerror}</span>
@@ -151,7 +151,7 @@ span{
 			</div>
 
 			<div class="login">
-				<form:form modelAttribute="registerBean" method="Post" action="/HOS/login">
+				<!--<form:form modelAttribute="registerBean" method="Post" action="/HOS/login">-->
 					<label for="chk" aria-hidden="true">Login</label>
 					<div class="input-box">
 						<form:input type="email"  placeholder="userEmail" path="userEmail"/>
