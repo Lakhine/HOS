@@ -16,7 +16,7 @@ class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 <property name="suffix" value=".jsp" /> 
 </bean> 
 <bean id="userdao" class="HOS.DAO.userDAO"></bean>
-<bean id="Roledao" class ="HOS.DAO.roleDABO"></bean>
+<!-- <bean id="Roledao" class ="HOS.DAO.roleDABO"></bean> -->
 <bean class="org.springframework.context.support.ResourceBundleMessageSource" 
 id="messageSource"> 
 <property name="basename" value="messages" /> 
