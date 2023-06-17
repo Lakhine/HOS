@@ -22,4 +22,6 @@ id="messageSource">
 <property name="basename" value="messages" /> 
 </bean>
 <mvc:annotation-driven/> 
+<mvc:resources mapping="/resources/**" location="/resources/" />
+
 </beans>
