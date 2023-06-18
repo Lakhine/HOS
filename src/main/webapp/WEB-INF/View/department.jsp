@@ -26,7 +26,7 @@
   <link href="${pageContext.request.contextPath}/resources/css/responsive.css" rel="stylesheet" />
 </head>
 <body>
-
+<h1>hello world</h1>
 
 
 <!-- jQery -->
