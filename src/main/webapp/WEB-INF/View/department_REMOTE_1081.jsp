@@ -26,11 +26,7 @@
   <link href="${pageContext.request.contextPath}/resources/css/responsive.css" rel="stylesheet" />
 </head>
 <body>
-<<<<<<< HEAD
-<h1>ABC</h1>
-=======
 <h1>hello world</h1>
->>>>>>> 00e50160f801fcfa475306ac58047587126a8c04
 
 
 <!-- jQery -->
