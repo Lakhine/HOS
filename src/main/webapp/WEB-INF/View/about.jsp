@@ -1,14 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<title>Header</title>
+<title>About</title>
 <!-- <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/" /> -->
  <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/bootstrap.css" />
@@ -27,51 +25,55 @@
   <!-- responsive style -->
   <link href="${pageContext.request.contextPath}/resources/css/responsive.css" rel="stylesheet" />
 </head>
-<body>
-	    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="">
-            <span>
-              H.OS
-            </span>
-          </a>
+<body class="sub_page">
+	<div class="hero_area">
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class=""> </span>
-          </button>
+    	<div class="hero_bg_box">
+      		<img src="${pageContext.request.contextPath}/resources/images/hero-bg.png" alt="">
+    	</div>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-              <li class="nav-item active"> <!-- Error link  -->
-                <a class="nav-link" href="<c:url value="/homepage.jsp" />" id="home">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="<c:url value="about.jsp" />" id="about"> About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="department.jsp" id="dep">Departments</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="doctors.jsp" id="doc">Doctors</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="appointment.jsp" id="get">Get Appointment</a>
-              </li>
-              <form class="form-inline">
-                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                  <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
-              </form>
-            </ul>
+   	 <!-- header section strats -->
+   		<jsp:include page="header.jsp"></jsp:include>
+     <!-- end header section -->
+     </div>
+     <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="images/about-img.jpg" alt="">
           </div>
-        </nav>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                About <span>Us</span>
+              </h2>
+            </div>
+            <p>
+              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
+              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
+              the middle of text. All
+            </p>
+            <a href="">
+              Read More
+            </a>
+          </div>
+        </div>
       </div>
-    </header>
-    <!-- end header section -->
-    
-    <!-- jQery -->
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+ <!-- footer section -->
+  <jsp:include page="footer.jsp"></jsp:include>
+  <!-- footer section -->
+<!-- jQery -->
   <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-3.4.1.min.js"></script>
   <!-- popper js -->
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
