@@ -52,7 +52,7 @@
         <div class="col-sm-6 col-lg-4 mx-auto">
           <div class="box">
             <div class="img-box">
-              <img src="images/photo_2023-06-02_10-31-36.jpg" class="img-h" alt="">
+              <img src="${pageContext.request.contextPath}/resources/images/photo_2023-06-02_10-31-36.jpg" class="img-h" alt="">
             </div>
             <div class="detail-box">
               <div class="social_box">
@@ -81,7 +81,7 @@
         <div class="col-sm-6 col-lg-4 mx-auto">
           <div class="box">
             <div class="img-box">
-              <img src="images/photo_2023-06-02_10-31-37.jpg" class="img-h" alt="">
+              <img src="${pageContext.request.contextPath}/resources/images/photo_2023-06-02_10-31-37.jpg" class="img-h" alt="">
             </div>
             <div class="detail-box">
               <div class="social_box">
@@ -110,7 +110,7 @@
         <div class="col-sm-6 col-lg-4 mx-auto">
           <div class="box">
             <div class="img-box">
-              <img src="images/photo_2023-06-02_10-31-38.jpg" class="img-h" alt="">
+              <img src="${pageContext.request.contextPath}/resources/images/photo_2023-06-02_10-31-38.jpg" class="img-h" alt="">
             </div>
             <div class="detail-box">
               <div class="social_box">
@@ -141,7 +141,7 @@
         <div class="col-sm-6 col-lg-4 mx-auto">
           <div class="box">
             <div class="img-box">
-              <img src="images/photo_2023-06-02_10-31-36.jpg" class="img-h" alt="">
+              <img src="${pageContext.request.contextPath}/resources/images/photo_2023-06-02_10-31-36.jpg" class="img-h" alt="">
             </div>
             <div class="detail-box">
               <div class="social_box">
@@ -170,7 +170,7 @@
         <div class="col-sm-6 col-lg-4 mx-auto">
           <div class="box">
             <div class="img-box">
-              <img src="images/photo_2023-06-02_10-31-37.jpg" class="img-h" alt="">
+              <img src="${pageContext.request.contextPath}/resources/images/photo_2023-06-02_10-31-37.jpg" class="img-h" alt="">
             </div>
             <div class="detail-box">
               <div class="social_box">
@@ -199,7 +199,7 @@
         <div class="col-sm-6 col-lg-4 mx-auto">
           <div class="box">
             <div class="img-box">
-              <img src="images/photo_2023-06-02_10-31-38.jpg" class="img-h" alt="">
+              <img src="${pageContext.request.contextPath}/resources/images/photo_2023-06-02_10-31-38.jpg" class="img-h" alt="">
             </div>
             <div class="detail-box">
               <div class="social_box">

@@ -26,11 +26,11 @@ import HOS.model.registerBean;
 public class userController {
 	@Autowired
 	private userDAO userdao;
-	@RequestMapping(value={"/"},method=RequestMethod.GET)
+	@RequestMapping(value={"/","/register"},method=RequestMethod.GET)
 	public ModelAndView registerView() {
 		return new ModelAndView("register","registerBean",new registerBean());
 	}
-	@RequestMapping(value="/register",method=RequestMethod.POST) //Registration
+	@RequestMapping(value="/processregister",method=RequestMethod.POST) //Registration
 	public String register(
 			@ModelAttribute("registerBean")
 			@Validated registerBean bean,
@@ -112,4 +112,32 @@ public String login(
 	}
 	return "homepage";
 }
+	// direction to homepage.jsp
+	@RequestMapping(value= {"/home"} , method=RequestMethod.GET)
+	public String home() {
+		return "homepage";
+	}
+	// direction to departmentpage.jsp
+	@RequestMapping(value= {"/departmentpage"} , method=RequestMethod.GET)
+	public String departmentpage() {
+		return "department";
+	}
+	// direction to doctor.jsp
+	@RequestMapping(value= {"/doctorpage"} , method=RequestMethod.GET)
+	public String doctorpage() {
+		return "doctor";
+	}
+	// direction to about.jsp
+	@RequestMapping(value= {"/aboutpage"} , method=RequestMethod.GET)
+	public String aboutpage() {
+		return "about";
+	}
+	// direction to appointment.jsp
+	@RequestMapping(value= {"/appointmentpage"} , method=RequestMethod.GET)
+	public String appointmentpage() {
+		return "appointment";
+	}
+
+
+
 }

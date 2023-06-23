@@ -181,7 +181,7 @@
                     	<label><input type="checkbox">I agree to the terms & conditions.</label>
                 	</div>
                 	<form:button class="bbk">Login</form:button>
-                	<h4 class="phrase">You don't have an account? <a href="register">Register</a> </h4>
+                	<h4 class="phrase">You don't have an account? <a href="/HOS/register">Register</a> </h4>
                 	                	<span class="errorsms">${notUser}</span>
 					<span class="errorsms">${bindingerror1}</span>
             	</div>

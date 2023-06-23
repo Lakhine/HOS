@@ -44,20 +44,20 @@
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
-              <li class="nav-item active"> <!-- Error link  -->
-                <a class="nav-link" href="<c:url value="/homepage.jsp" />" id="home">Home <span class="sr-only">(current)</span></a>
+              <li class="nav-item active"> 
+                <a class="nav-link" href="/HOS/home" id="home">Home </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<c:url value="about.jsp" />" id="about"> About</a>
+                <a class="nav-link" href="/HOS/aboutpage" id="about"> About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="department.jsp" id="dep">Departments</a>
+                <a class="nav-link" href="/HOS/departmentpage" id="dep">Departments</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="doctors.jsp" id="doc">Doctors</a>
+                <a class="nav-link" href="/HOS/doctorpage" id="doc">Doctors</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="appointment.jsp" id="get">Get Appointment</a>
+                <a class="nav-link" href="/HOS/appointmentpage" id="get">Get Appointment</a>
               </li>
               <form class="form-inline">
                 <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">

@@ -167,7 +167,7 @@
             <div class="text">
                 <h3>Registration Form</h3>
             </div>
-            <form:form modelAttribute="registerBean" method="Post" action="/HOS/register" >
+            <form:form modelAttribute="registerBean" method="Post" action="/HOS/processregister" >
          	<div class="form">
                 	<div class="box_one" >
                     	<div class="box">
@@ -197,7 +197,7 @@
                     	<label><input type="checkbox">I agree to the terms & conditions.</label>
                 	</div>
                 	<form:button class="bbk">Submit</form:button>
-                	<h4 class="phrase">Already have an account? <a href="login">Login</a> </h4>
+                	<h4 class="phrase">Already have an account? <a href="/HOS/login">Login</a> </h4>
                 	
             	</div>
             	</form:form>

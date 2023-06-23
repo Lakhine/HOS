@@ -53,7 +53,7 @@
           <div class="col-md-3">
             <div class="box ">
               <div class="img-box">
-                <img src="images/s1.png" alt="">
+                <img src="${pageContext.request.contextPath}/resources/images/s1.png" alt="">
               </div>
               <div class="detail-box">
                 <h5>
@@ -68,7 +68,7 @@
           <div class="col-md-3">
             <div class="box ">
               <div class="img-box">
-                <img src="images/s2.png" alt="">
+                <img src="${pageContext.request.contextPath}/resources/images/s2.png" alt="">
               </div>
               <div class="detail-box">
                 <h5>
@@ -83,7 +83,7 @@
           <div class="col-md-3">
             <div class="box ">
               <div class="img-box">
-                <img src="images/s3.png" alt="">
+                <img src="${pageContext.request.contextPath}/resources/images/s3.png" alt="">
               </div>
               <div class="detail-box">
                 <h5>
@@ -98,7 +98,7 @@
           <div class="col-md-3">
             <div class="box ">
               <div class="img-box">
-                <img src="images/s4.png" alt="">
+                <img src="${pageContext.request.contextPath}/resources/images/s4.png" alt="">
               </div>
               <div class="detail-box">
                 <h5>

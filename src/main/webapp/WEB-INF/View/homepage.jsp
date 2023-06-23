@@ -191,7 +191,7 @@
           </div>
         </div>
         <div class="btn-box">
-          <a href="./departments.html">
+          <a href="/HOS/departmentpage">
             View All
           </a>
         </div>
@@ -224,7 +224,7 @@
               are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
               the middle of text. All
             </p>
-            <a href="./about.html">
+            <a href="/HOS/aboutpage">
               Read More
             </a>
           </div>
